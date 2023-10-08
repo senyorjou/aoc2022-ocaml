@@ -11,10 +11,11 @@ let sum_chunks chunk =
 
 
 let all_chunks data =
+  let compare_rev x y =
+    -1 * (compare x y) in
   Str.split (Str.regexp "\n\n") data
   |> List.map sum_chunks
-  |> List.sort compare
-  |> List.rev
+  |> List.sort compare_rev
 
 let rec take_n n xs =
   if n < 1 then []
