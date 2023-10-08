@@ -35,7 +35,7 @@ let get_repeated_on_elves (s1, s2, s3) =
   |> String.index values
 
 let rec part3 = function
-  | a::b::c::tl -> (a,b,c):: part3 tl
+  | a::b::c::tl -> (a,b,c)::part3 tl
   | _ -> []
 
 let count_per_3_elves data =
